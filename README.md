@@ -98,7 +98,25 @@ Os modelos foram avaliados utilizando R² (Coeficiente de Determinação) e RMSE
 
 O Random Forest foi o modelo escolhido devido ao seu desempenho superior, sendo salvo em `models/random_forest_regressor.pkl.`
 
-## 💡 6. Conclusão e Sugestões
+## 🖥️​ 6: Executar o Dashboard Interativo
+
+Ative o Ambiente Virtual:
+```sh
+.\venv\Scripts\**activate**
+```
+Instale o Streamlit:
+- Com o ambiente virtual (venv) ativo, instale a biblioteca:
+```sh
+pip install streamlit
+```
+Inicie o Dashboard:
+- No terminal, na pasta raiz do projeto, execute o comando:
+```sh
+streamlit run app.py
+```
+- Uma nova aba será aberta em seu navegador com o dashboard interativo.
+  
+## 💡 7. Conclusão e Sugestões
 A análise e a modelagem permitiram concluir que:
 
 - Impacto do Tabagismo: Ser fumante é o fator de maior impacto individual no custo do seguro.
