@@ -1,16 +1,109 @@
-Análise Preditiva de Custos de Seguro de Saúde 🏥Este repositório contém um projeto completo de Data Science, desde a análise exploratória de dados até a criação de um modelo preditivo e um dashboard interativo para prever os custos de seguros de saúde.Autor: Guilherme VictorData: 27/06/2025Assista ao Vídeo Explicativo do Projeto: > (🔗 Adicione o seu link do YouTube ou Google Drive aqui)🎯 1. Descrição do ProblemaUma companhia de seguros precisa de uma maneira mais precisa e automatizada para calcular os prêmios (custos) de seguro de saúde para seus clientes. O objetivo deste projeto é desenvolver um modelo de Machine Learning capaz de estimar os custos médicos anuais de um indivíduo com base em suas características demográficas e de saúde. Uma previsão precisa permite à empresa otimizar a precificação, tornando-a mais justa para o cliente e financeiramente sustentável para o negócio.📚 2. Fonte dos DadosO conjunto de dados utilizado foi o "Medical Cost Personal Datasets", disponível publicamente na plataforma Kaggle. Este dataset é ideal para a tarefa, pois é limpo e contém uma mistura de variáveis numéricas e categóricas relevantes.Link para o Dataset: Kaggle - Medical Cost Personal DatasetsEstrutura: O dataset contém 1338 registros e 7 colunas. A variável alvo é a charges (custos).🚀 3. Guia de Utilização do ProjetoSiga os passos abaixo para configurar e executar este projeto em sua máquina local.Pré-requisitosPython (versão 3.8 ou superior)GitPasso 1: Clone o RepositórioAbra seu terminal e clone este repositório:git clone <URL_DO_SEU_REPOSITORIO_NO_GITHUB>
-cd <NOME_DA_PASTA_DO_PROJETO>
-Passo 2: Configure o Ambiente VirtualÉ uma boa prática criar um ambiente virtual para isolar as dependências.# Criar o ambiente virtual
-python -m venv venv
+# Análise Preditiva de Custos de Seguro de Saúde 🏥
+Este repositório contém um projeto completo de Data Science, desde a análise exploratória de dados até a criação de um modelo preditivo para prever os custos de seguros de saúde.
 
-# Ativar o ambiente virtual
-# No Windows:
+Autor: Guilherme Victor de Melo Gonçalves
+
+Data: 27/06/2025
+
+    Assista ao Vídeo Explicativo do Projeto: > (`🔗 `)
+
+
+## 🎯 1. Descrição do Problema
+Uma companhia de seguros precisa de uma maneira mais precisa e automatizada para calcular os prêmios (custos) de seguro de saúde. O objetivo deste projeto é desenvolver um modelo de Machine Learning capaz de estimar os custos médicos anuais de um indivíduo com base em suas características demográficas e de saúde. Uma previsão precisa permite à empresa otimizar a precificação, tornando-a mais justa para o cliente e financeiramente sustentável para o negócio.
+
+## 🗂️ 2. Estrutura do Projeto
+    Assista ao Vídeo Explicativo do Projeto:        
+    📂 data/
+    │  
+    └── 📄 insurance.csv
+    
+    📂 img/
+    │  
+    └── 🖼️ (Gráficos gerados pela análise)
+   
+    
+    📂 models
+    │  
+    └──📦 random_forest_regressor.pkl
+    
+    📂 notebooks/
+    │  
+    └──📓 analise_de_seguro.ipynb
+    
+    ── 📜 requirements.txt
+    
+    ── 📄 README.md
+
+
+## 🚀 3. Guia de Utilização do ProjetoSiga os passos abaixo para configurar e executar este projeto em sua máquina local.
+### Pré-requisitos: 
+
+- Python (`https://www.python.org/ftp/python/3.13.5/python-3.13.5-amd64.exe`)
+- Git
+
+### 1: Clone o Repositório 
+Abra seu terminal e clone este repositório para sua máquina local:
+```sh
+git clone < https://github.com/MechamoGui/Projeto-Data-Science-Final.git >
+ ```
+ ```sh
+cd < NOME_DA_PASTA_DO_PROJETO >
+ ```
+### 2: Configure o Ambiente Virtual
+É uma boa prática criar um ambiente virtual para isolar as dependências.
+Criar o ambiente virtual (venv)
+```sh
+python -m venv venv
+```
+### Ativar o ambiente virtual
+
+#### No Windows:
+ ```sh
 .\venv\Scripts\activate
-# No macOS/Linux:
+```
+#### No macOS/Linux:
+ ```sh
 source venv/bin/activate
-Passo 3: Instale as DependênciasCom o ambiente virtual ativo, instale todas as bibliotecas necessárias:pip install -r requirements.txt
-Passo 4: Execute o ProjetoExistem duas formas principais de interagir com este projeto:A. Análise Completa no Jupyter Notebook:Para ver todo o processo de análise, limpeza e treinamento do modelo.# Inicie o Jupyter Lab
-jupyter lab
-No navegador, navegue até a pasta notebooks/ e abra o arquivo analise_de_seguro.ipynb.B. Dashboard Interativo de Previsão:Para usar o modelo treinado em uma interface amigável para prever custos.# Execute o aplicativo Streamlit
-streamlit run app.py
-Uma nova aba será aberta em seu navegador com o dashboard interativo.🛠️ 4. Técnicas UtilizadasLimpeza e Preparação: Remoção de registros duplicados, codificação de variáveis categóricas (sex, smoker, region) com One-Hot Encoding e padronização das variáveis numéricas (age, bmi, children) com StandardScaler.Análise Exploratória (EDA): Geração de estatísticas descritivas e visualizações (histogramas, boxplots, matriz de correlação) com Matplotlib e Seaborn para identificar padrões e insights.Modelagem Preditiva: Divisão dos dados em treino (80%) e teste (20%). Treinamento e avaliação de modelos de Scikit-learn (Regressão Linear e Random Forest Regressor). O melhor modelo foi salvo em um arquivo .pkl com joblib.Visualização e Relatório Técnico: Criação de um dashboard interativo com Streamlit para permitir a interação do usuário com o modelo e elaboração deste README.md como relatório técnico final.📊 5. Resultados e Métricas dos ModelosOs modelos foram avaliados utilizando R² (Coeficiente de Determinação) e RMSE (Raiz do Erro Quadrático Médio).ModeloR² (R-squared)RMSE (Erro Médio)Regressão Linear0.7833$5.796,28Random Forest Regressor0.8655$4.547,41O Random Forest foi o modelo escolhido devido ao seu desempenho superior, explicando 86.5% da variância nos custos e com um erro médio de previsão menor.💡 6. Conclusão e SugestõesConclusãoA análise e a modelagem permitiram extrair insights valiosos e confirmar hipóteses:Impacto do Tabagismo: Ser fumante (smoker=yes) é, de longe, o fator mais significativo para o aumento dos custos do seguro.Idade e IMC: São fatores importantes com correlação positiva clara com os custos.Eficácia do Modelo: O modelo Random Forest é uma ferramenta eficaz e robusta para a tarefa, provando que é possível prever os custos de seguro com um bom grau de precisão. O modelo desenvolvido pode servir como uma ferramenta poderosa para a seguradora otimizar suas operações de precificação.Próximos PassosOtimização de Hiperparâmetros: Utilizar GridSearchCV ou RandomizedSearchCV para encontrar a melhor combinação de parâmetros para o Random Forest, potencialmente melhorando sua precisão.Engenharia de Features: Criar novas variáveis (ex: uma categoria para obesidade baseada no IMC ou interações entre features) para tentar capturar relações mais complexas.Deploy em Nuvem: Publicar o dashboard Streamlit em uma plataforma como o "Streamlit Community Cloud" ou "Heroku" para que ele fique acessível publicamente na internet.
+```
+### 3: Instale as Dependências
+Com o ambiente virtual ativo, instale todas as bibliotecas necessárias:
+```sh
+pip install -r requirements.txt
+```
+
+### 4: Execute a Análise 
+Para ver todo o processo de análise, limpeza, treinamento e avaliação do modelo:
+Inicie o 
+- Jupyter Lab
+
+## 🛠️ 4. Técnicas e Ferramentas Utilizadas
+- Limpeza e Preparação: Remoção de duplicatas, codificação com One-Hot Encoding e padronização com StandardScaler.
+
+- Análise Exploratória (EDA): Geração de histogramas, boxplots e matriz de correlação com Matplotlib e Seaborn.
+
+- Modelagem Preditiva: Treinamento e avaliação de modelos de Scikit-learn (Regressão Linear e Random Forest Regressor).
+
+- Ambiente de Desenvolvimento: Análise realizada em Jupyter Notebook.
+
+- Versionamento: Controle de versão realizado com `Git` e `GitHub`.
+  
+## 📊 5. Resultados e Métricas dos Modelos
+Os modelos foram avaliados utilizando R² (Coeficiente de Determinação) e RMSE (Raiz do Erro Quadrático Médio).
+
+    ModeloR²                  (R-squared)              RMSE (Erro Médio)
+
+    Regressão Linear          0.7833                   $5.796,28
+
+    Random Forest Regressor   0.8655                   $4.547,41
+
+O Random Forest foi o modelo escolhido devido ao seu desempenho superior, sendo salvo em `models/random_forest_regressor.pkl.`
+
+## 💡 6. Conclusão e Sugestões
+A análise e a modelagem permitiram concluir que:
+
+- Impacto do Tabagismo: Ser fumante é o fator de maior impacto individual no custo do seguro.
+
+- Idade e IMC: São fatores importantes com correlação positiva clara com os custos.
+
+- Eficácia do Modelo: O modelo Random Forest é uma ferramenta eficaz para a tarefa, servindo como uma base sólida para otimizar a precificação de apólices.
+
