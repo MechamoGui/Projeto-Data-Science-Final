@@ -102,7 +102,7 @@ O Random Forest foi o modelo escolhido devido ao seu desempenho superior, sendo 
 
 Ative o Ambiente Virtual:
 ```sh
-.\venv\Scripts\**activate**
+.\venv\Scripts\activate
 ```
 Instale o Streamlit:
 - Com o ambiente virtual (venv) ativo, instale a biblioteca:
