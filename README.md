@@ -5,7 +5,7 @@ Autor: Guilherme Victor de Melo Gonçalves
 
 Data: 27/06/2025
 
-    Assista ao Vídeo Explicativo do Projeto: > (`🔗 `)
+    Assista ao Vídeo Explicativo do Projeto: > (`https://www.youtube.com/watch?v=ADULo8KYSKU `)
 
 
 ## 🎯 1. Descrição do Problema
